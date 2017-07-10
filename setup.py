@@ -20,8 +20,7 @@ setup(
     packages=find_packages("src", exclude=["tests"]),
     package_dir={"": "src"},
     install_requires=[
-        "future>=0.16.0",
-        "six>=1.10.0"
+        "future>=0.16.0"
     ],
     setup_requires=[
         "pytest-runner>=2.11.1",
