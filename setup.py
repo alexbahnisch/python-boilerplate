@@ -6,7 +6,7 @@ setup(
     name="python-boilerplate",
     version="0.0.1-SNAPSHOT",
     description="A boilerplate for creating python 3 projects and libraries.",
-    url="https://github.com/alexbahnisch/python3-boilerplate",
+    url="https://github.com/alexbahnisch/python-boilerplate",
     author="Alex Bahnisch",
     author_email="alexbahnisch@gmail.com",
     license="MIT",
