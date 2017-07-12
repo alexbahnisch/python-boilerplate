@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from past.builtins import basestring
 
-from package import python3
+from main.package import python3
 
 
 def test_strings():

@@ -17,8 +17,8 @@ setup(
         "Programming Language :: Python :: 3.6"
     ],
     keywords="python boilerplate",
-    packages=find_packages("src", exclude=["tests"]),
-    package_dir={"": "src"},
+    packages=find_packages("src/main", exclude=["tests"]),
+    package_dir={"": "src/main"},
     install_requires=[
         "future>=0.16.0"
     ],
