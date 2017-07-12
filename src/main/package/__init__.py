@@ -1,2 +1,5 @@
 #!/usr/bin/env python
-from .base import python3
+
+
+def fun(arg):
+    return arg
