@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 
 setup(
-    name="python3-boilerplate",
+    name="python-boilerplate",
     version="0.0.1-SNAPSHOT",
     description="A boilerplate for creating python 3 projects and libraries.",
     url="https://github.com/alexbahnisch/python3-boilerplate",
