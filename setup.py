@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="python-boilerplate",
-    version="0.0.1-SNAPSHOT",
+    version="0.0.1",
     description="A boilerplate for creating python 3 projects and libraries.",
     url="https://github.com/alexbahnisch/python-boilerplate",
     author="Alex Bahnisch",
@@ -24,7 +24,8 @@ setup(
     ],
     setup_requires=[
         "pytest-runner>=2.11.1",
-        "tox>=2.7.0"
+        "tox>=2.7.0",
+        "twine>=1.9.1"
     ],
     tests_require=[
         "pytest>=3.1.3"

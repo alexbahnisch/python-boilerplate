@@ -1,0 +1,11 @@
+language: python
+
+install:
+  - pip install tox
+
+script:
+  - tox
+
+notifications:
+  email: true
+
