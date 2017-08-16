@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="python-boilerplate",
-    version="0.0.1",
+    version="0.0.1.dev0",
     description="A boilerplate for creating python 3 projects and libraries.",
     url="https://github.com/alexbahnisch/python-boilerplate",
     author="Alex Bahnisch",
@@ -12,9 +12,16 @@ setup(
     license="MIT",
     classifiers=[
         "Development Status :: 3 - Alpha",
+        "Intended Audience :: Data Scientists",
+        "Natural Language :: English",
         "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 2.7"
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6"
+        "Programming Language :: Python :: 3.5"
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: Implementation :: CPython"
     ],
     keywords="python boilerplate",
     packages=find_packages("src/main", exclude=["tests"]),
