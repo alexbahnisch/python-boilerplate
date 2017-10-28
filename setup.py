@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 from setuptools import find_packages, setup
 
-
 setup(
     name="python-boilerplate",
-    version="0.0.1.dev0",
+    version="0.0.1",
     description="A boilerplate for creating python 3 projects and libraries.",
     url="https://github.com/alexbahnisch/python-boilerplate",
     author="Alex Bahnisch",
@@ -12,7 +11,6 @@ setup(
     license="MIT",
     classifiers=[
         "Development Status :: 3 - Alpha",
-        "Intended Audience :: Data Scientists",
         "Natural Language :: English",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
@@ -27,7 +25,7 @@ setup(
     packages=find_packages("src/main", exclude=["tests"]),
     package_dir={"": "src/main"},
     install_requires=[
-        "future>=0.16.0"
+        "six>=1.11.0"
     ],
     setup_requires=[
         "pytest-runner>=2.11.1",

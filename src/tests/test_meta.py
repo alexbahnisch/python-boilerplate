@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-from future.utils import with_metaclass
+from six import with_metaclass
 
 
 class SuperClass(object):

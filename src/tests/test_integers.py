@@ -1,10 +1,9 @@
-#!/usr/bin/env python
-from builtins import int
+from six import integer_types
 
 
 def test_int():
-    assert isinstance(2, int)
+    assert isinstance(2, integer_types)
 
 
 def test_long():
-    assert isinstance(2 ** 32, int)
+    assert isinstance(2 ** 32, integer_types)
