@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from six import string_types, PY3
+from six import string_types, PY2, PY3
 
 
 def test_strings():
@@ -17,4 +17,5 @@ def test_strings():
 def test_basestring():
     assert isinstance("string", string_types)
     assert isinstance(u"string", string_types)
-    assert isinstance(b"string", string_types)
+    if PY2:
+        assert isinstance(b"string", string_types)
