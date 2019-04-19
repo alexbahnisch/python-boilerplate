@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+from boilerplate import fun
 
 
 def main() -> None:
-    print("Hello World!")
+    print(fun("Hello World!"))
 
 
 if __name__ == "__main__":
