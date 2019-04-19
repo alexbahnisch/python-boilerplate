@@ -1,11 +1,16 @@
-# root:
+# Root:
 .cache
 .eggs
 .idea
+.mypy_cache
+.pytest_cache
 .tox
+.venv
 build
 dist
 
-# wildcards:
+# Ignores:
 !**.gitkeep
+
+# Wildcards:
 **.egg-info

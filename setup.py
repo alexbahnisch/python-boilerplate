@@ -1,9 +1,21 @@
 #!/usr/bin/env python
 from setuptools import find_packages, setup
 
+install_requires = []
+
+test_requires = [
+    "pytest>=4.4.1,<5"
+]
+
+dev_requires = [
+    *test_requires,
+    "pytest-runner>=4.4.0,<5",
+    "tox>=3.9.0,<4"
+]
+
 setup(
-    name="python-boilerplate",
-    version="0.0.1",
+    name="boilerplate",
+    version="0.0.1.dev0",
     description="A boilerplate for creating python 3 projects and libraries.",
     url="https://github.com/alexbahnisch/python-boilerplate",
     author="Alex Bahnisch",
@@ -22,17 +34,13 @@ setup(
         "Programming Language :: Python :: Implementation :: CPython"
     ],
     keywords="python boilerplate",
-    packages=find_packages("src/main", exclude=["tests"]),
-    package_dir={"": "src/main"},
-    install_requires=[
-        "six>=1.11.0"
-    ],
-    setup_requires=[
-        "pytest-runner>=2.11.1",
-        "tox>=2.7.0"
-    ],
-    tests_require=[
-        "pytest>=3.1.3"
-    ],
-    test_suite="src.tests"
+    packages=find_packages("src"),
+    package_dir={"": "src"},
+    python_requires=">=3.6",
+    install_requires=install_requires,
+    extras_require={
+        "dev": dev_requires
+    },
+    tests_require=test_requires,
+    test_suite="tests"
 )
