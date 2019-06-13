@@ -9,6 +9,7 @@ reset := $(shell tput -Txterm sgr0)
 
 ## MACROS
 poetry := poetry
+sources := ./scripts ./src ./tests
 target_max_char_number := 20
 
 ## HELPER TARGETS
@@ -42,20 +43,39 @@ help:
 	@rm -rf ./src/*.egg-info
 
 ## TARGETS
+.PHONY: black
+## Run python black check
+black: install
+	@$(poetry) run black --check ${sources}
+
 .PHONY: clean
 ## Remove the virtual env and all auto generated directories/files
 clean:
 	@rm -rf .eggs .mypy_cache .pytest_cache .tox .venv build dist pip-wheel-metadata
+
+.PHONY: ci
+## CI (Continuous Integration) command
+ci: install black mypy test tox
+
+.PHONY: fix
+## Run all auto fixes
+fix: install
+	@$(poetry) run black ${sources}
 
 .PHONY: install
 ## Create venv and install dependencies with poerty
 install: .venv
 	@echo '$(YELLOW)The virtual env (venv) has been cached, to delete the cache run "make clean" or delete the ".venv" directrory$(RESET)'
 
+.PHONY: lint
+## Run flake8 linting
+lint: install
+	@$(poetry) run flake8 ${sources}
+
 .PHONY: mypy
 ## Run mypy
 mypy: install
-	@$(poetry) run mypy ./scripts ./src ./tests
+	@$(poetry) run mypy ${sources}
 
 .PHONY: test
 ## Run tests
@@ -63,6 +83,6 @@ test: install
 	@$(poetry) run pytest
 
 .PHONY: tox
-## Run tox tests
+## Run tox tests on other python environments
 tox: install
 	@$(poetry) run tox

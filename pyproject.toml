@@ -18,13 +18,21 @@ classifiers=[
 ]
 keywords="python boilerplate"
 
+[tool.black]
+line-length = 160
+target-version = ['py37']
+
 [tool.poetry.dependencies]
 python = "^3.6"
 mypy = "^0.701.0"
+flake8 = "^3.7"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.4"
-tox = "^3.9"
+tox = "^3.12"
+flake8 = "^3.7"
+mypy = "^0.701.0"
+black = {version = "^18.3-alpha.0",allows-prereleases = true}
 
 [tool.poetry.scripts]
 hello_world = "scripts.hello_world:main"
