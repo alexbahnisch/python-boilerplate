@@ -24,13 +24,13 @@ target-version = ['py37']
 
 [tool.poetry.dependencies]
 python = "^3.6"
-mypy = "^0.701.0"
-flake8 = "^3.7"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.4"
 tox = "^3.12"
 flake8 = "^3.7"
+mkdocs = "^1.0"
+mkdocs-material = "^4.4"
 mypy = "^0.701.0"
 black = {version = "^18.3-alpha.0",allows-prereleases = true}
 

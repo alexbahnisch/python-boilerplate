@@ -1,4 +1,4 @@
-# Root:
+# root:
 .cache
 .eggs
 .idea
@@ -8,10 +8,14 @@
 .venv
 build
 dist
+site
 pip-wheel-metadata
 
-# Ignores:
+# docs:
+/docs/home.md
+
+# ignores:
 !**.gitkeep
 
-# Wildcards:
+# wildcards:
 **.egg-info

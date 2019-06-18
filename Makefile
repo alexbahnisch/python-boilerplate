@@ -57,6 +57,13 @@ clean:
 ## CI (Continuous Integration) command
 ci: install black mypy test tox
 
+.PHONY: docs
+## Make the docs and serve locally
+docs:
+	@cp -f ./README.md ./docs/home.md
+	@sed -i -e "/<!---StartDelete--->/,/<!---EndDelete--->/d" ./docs/home.md
+	@$(poetry) run mkdocs serve --dev-addr localhost:8001 --livereload
+
 .PHONY: fix
 ## Run all auto fixes
 fix: install

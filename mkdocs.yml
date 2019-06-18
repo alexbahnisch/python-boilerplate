@@ -1,0 +1,17 @@
+site_author: "Alex Bahnisch"
+site_name: "boilerplate"
+repo_url: "https://github.com/alexbahnisch/python-boilerplate"
+
+markdown_extensions:
+  - admonition:
+  - codehilite:
+      linenums: true
+  - toc:
+      permalink: true
+
+nav:
+  - home: "home.md"
+  - usage: "usage.md"
+
+theme:
+  name: "material"
