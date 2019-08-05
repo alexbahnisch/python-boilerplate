@@ -27,7 +27,7 @@ python = "^3.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.4"
-tox = "^3.12"
+tox = "^3.13"
 flake8 = "^3.7"
 mkdocs = "^1.0"
 mkdocs-material = "^4.4"
