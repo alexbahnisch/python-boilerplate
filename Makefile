@@ -55,7 +55,7 @@ clean:
 
 .PHONY: ci
 ## CI (Continuous Integration) command
-ci: install black mypy test tox
+ci: install black mypy tox
 
 .PHONY: docs
 ## Make the docs and serve locally
